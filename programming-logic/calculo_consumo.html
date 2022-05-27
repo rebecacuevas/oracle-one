@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Alcohol o gasolina?</title>
+</head>
+<body>
+
+    <h3>¿Alcohol o gasolina?</h3>
+
+    <script>
+
+        // Kilómetros recorridos con cada tipo de combustible
+        var gasDrivenKilometers = 480; 
+        var alcoholDrivenKilometers = 300;
+
+        // Capacidad del tanque en litros
+        var tankCapacityInLiters = 40; 
+
+        // Consumo de gasolina por kilómetro
+        var gasConsumptionPerKilometer = gasDrivenKilometers / tankCapacityInLiters;
+
+        // Consumo de alcohol por kilómetro
+        var alcoholConsumptioPerKilometer = alcoholDrivenKilometers / tankCapacityInLiters; 
+
+
+        document.write("El tanque de tu auto tiene una capacidad de " + tankCapacityInLiters + " litros <br>");
+
+        document.write("<br>");
+        
+        // Imprimir consumo de gasolina por kilómetro
+        document.write("Si llenas tu tanque con gasolina, tu auto consume " + gasConsumptionPerKilometer + " litros en cada kilómetro [km/L] <br>");
+        
+        document.write("Un tanque de gasolina te alcanza para recorrer " + gasDrivenKilometers + " kilómetros <br>");
+
+        document.write("<br>");
+     
+        // Imprimir consumo de alcohol por kilómetro
+        document.write("Si llenas tu tanque con alcohol, tu auto consume " + alcoholConsumptioPerKilometer + " litros en cada kilómetro [km/L] <br>");
+
+        document.write("Un tanque de alcohol te alcanza para recorrer " + alcoholDrivenKilometers + " kilómetros <br>");
+
+    </script>
+    
+</body>
+</html>

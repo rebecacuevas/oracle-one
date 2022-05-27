@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+
+    <script>
+
+        // Las funciones siempre son lo primero a escribir en un documento JS
+
+        // Función simple
+        function saltarLinea() {
+            document.write("<br>");
+        }
+
+        // Función con parámetros
+        function imprimir(frase) {
+            // Llamar una función dentro de otra función
+            saltarLinea();
+
+            document.write(frase);
+        }
+
+        // -------------------------------------
+
+        document.write("Hola, ¿cómo estás?");
+
+        // Llamar a la función de salto de línea 
+        saltarLinea();
+
+        document.write("Bien, gracias");
+
+        // Llamar a la función de salto de línea
+        saltarLinea();
+
+
+        var tuNombre = prompt("¿Cómo te llamas?");
+
+        // Llamar a la función de imprimir mensaje
+        imprimir("Hola, " + tuNombre);
+
+    </script>
+    
+</body>
+</html>

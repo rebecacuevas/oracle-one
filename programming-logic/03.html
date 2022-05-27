@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio tres</title>
+</head>
+<body>
+
+    <script>
+        
+        // Detectamos un patrón en los datos, podemos usar una variable para año
+        document.write("Juan tiene: " + (2022-2000) + " años <br>");
+        document.write("Pedro tiene: " + (2022-1997) + " años <br>");
+        document.write("Carlos tiene: " + (2022-2007) + " años <br>");
+
+        document.write("<br>");
+
+        // Declarar variable
+        var year = 2022;
+
+        document.write("Juan tiene: " + (year - 2000) + " años <br>");
+        document.write("Pedro tiene: " + (year - 1997) + " años <br>");
+        document.write("Carlos tiene: " + (year - 2007) + " años <br>");
+
+        document.write("<br>");
+
+        // Guardar datos que usaremos en variables con nombres entendibles
+        var dannaAge = 10;
+        var annaAge = 50;
+        var marthaAge = 35;
+
+        // Atribuir una fórmula matemática a una variable 
+        var mean = ((dannaAge+annaAge+marthaAge)/3);
+
+        // Podemos guardar texto en variables
+        var firstName = "Danna";
+        var secondName = "Anna";
+        var thirdName = "Martha";
+
+        document.write("El promedio de las edades de " + firstName + ", " + secondName + " y " + thirdName + " es: " + mean);
+        document.write("<br>");
+
+        document.write("El promedio redondeado de sus edades es: " + Math.round(mean));
+
+    </script>
+    
+</body>
+</html>

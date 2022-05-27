@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cuántos años me llevas?</title>
+</head>
+<body>
+
+    <script>
+        
+        /*
+        Mostrar el mensaje "Nuestra diferencia de edad es: "
+        Concatenar el resultado de la diferencia de edades 
+        Usar las funciones saltarLinea() e imprimir()
+        */
+
+        function saltarLinea() {
+            document.write("<br>");
+        }
+
+        function imprimir(mensaje){
+            document.write("<big>" + mensaje + "<big>");
+            saltarLinea();
+        }
+
+        function saltarCincoLineas(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<hr>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        var miEdad = 25;
+        var edadHermano = 20;
+
+        var diferenciaEdad = miEdad - edadHermano;
+
+        saltarCincoLineas();
+
+        document.write("Emilio tiene " + edadHermano + " años");
+
+        saltarLinea();
+
+        document.write("Yo tengo " + miEdad + " años");
+
+        saltarLinea();
+        saltarCincoLineas();
+
+        imprimir("Nuestra diferencia de edad es de: " + diferenciaEdad + " años");
+
+    </script>
+    
+</body>
+</html>
