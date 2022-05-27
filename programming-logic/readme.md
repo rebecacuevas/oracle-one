@@ -11,4 +11,6 @@
 | 06.html                | Funciones sin parámetros y con parámetros                                         |
 | 07.html                | Ejercicio para mandar alertas con funciones                                       |
 | diferencia_edades.html | Ejercicio para calcular la diferencia de edad entre dos personas usando funciones |
-| 08.html                |                                                                                   |
+| imc.html               | Ejercicio para calcular el Índice de Masa Corporal usando funciones               |
+| 08.html                | return                                                                            |
+| 09.html                | Pedir datos al usuario con prompt()                                               |

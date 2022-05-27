@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+
+    <script>
+
+        function enterLineBreak(){
+            document.write("<br>");
+        }
+
+        function printText(message){
+            document.write(message);
+            enterLineBreak();
+        }
+
+        // Qué recibe
+        // Qué procesa 
+        // Qué me devuelve 
+        // Una función debe regresar un resultado y llevar a cabo un solo cálculo 
+        function calcImc(weight, height){
+            
+            var yourImc = Math.round(weight / (height * height));
+            
+            return yourImc;
+            // return(peso / (altura * altura));
+
+        }
+
+        var carlosImc = calcImc(100, 1.82);
+        var valeriaImc = calcImc(50, 1.73);
+
+        printText("El Indice de Masa Corporal de Carlos es: " + carlosImc);
+        printText("El Indice de Masa Corporal de Valeria es: " + valeriaImc);
+
+        printText("El promedio del IMC de Carlos y Valeria es: " + ((carlosImc + valeriaImc) / 2));
+
+        // printText("El promedio del IMC de Carlos y Valeria es: " + (calcImc(100, 1.82) + calcImc(50, 1.73)) / 2);
+
+    </script>
+    
+</body>
+</html>

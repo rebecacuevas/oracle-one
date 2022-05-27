@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula tu IMC</title>
+</head>
+<body>
+
+    <script>
+
+        function enterLineBreak(){
+            document.write("<br>");
+        }
+
+        function printText(message){
+            document.write(message);
+            enterLineBreak();
+        }
+
+        function calcImc(weight, height, name){
+
+            var yourImc = Math.round(weight / (height * height));
+            
+            // Usar función para imprimir texto dentro de la función calcular IMC
+            //document.write("El Índice de Masa Corporal de " + name + " es " +  yourImc);
+            printText("El Índice de Masa Corporal de " + name + " es " + yourImc);
+        }
+
+        // -------------------------------------------------------
+        // Método sin usar función para calcular IMC
+        var pacientWeightInKilos = 100;
+        var pacientHeightInMeters = 1.82;
+        var pacientImc = pacientWeightInKilos / (pacientHeightInMeters * pacientHeightInMeters); 
+
+        var roundedPacientImc = Math.round(pacientImc);
+
+        console.log(roundedPacientImc);
+
+        printText("Tu Índice de Masa Corporal es: " + roundedPacientImc);
+
+        enterLineBreak();
+
+        // --------------------------------------------------------
+
+        // Método usando función para IMC
+        calcImc(100, 1.82, "Adán");
+
+    </script>
+    
+</body>
+</html>
