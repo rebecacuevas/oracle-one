@@ -20,17 +20,21 @@
 
         // Math.round() - redondea el número
         // Math.random() - arroja un número al azar
-        // Multiplicar por 10 hace que solo nos arroje valores enteros del 1 al 10
-        var numeroSecreto = Math.round(Math.random() * 10);
-        var numeroJugador = parseInt(prompt("Intenta adivinar qué número estoy pensando"));
+        // Multiplicar por 10 hace que solo nos arroje valores enteros del 0 al 10
+        var secretNumber= Math.round(Math.random() * 10);
+        var playerTry = parseInt(prompt("Intenta adivinar qué número del 0 al 10 estoy pensando"));
 
-        if (numeroJugador === numeroSecreto) {
+        // ---------------------------------------------------------------------------------
+
+        // Condicional para avisarle al usuario si logró adivinar o no el número secreto
+
+        if (playerTry === secretNumber) {
 
             printText("¡Felicidades!");
 
         } else {
 
-            printText("No acertaste. El número secreto era " + numeroSecreto);
+            printText("No acertaste. El número secreto era " + secretNumber);
 
         }
 
