@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puntaje del equipo</title>
+</head>
+<body>
+    
+    <script>
+
+        function enterLineBreak(){
+            document.write("<br>");
+        }
+
+        function printText(message){
+            document.write(message);
+            enterLineBreak();
+        }
+
+        var winnedMatches = parseInt(prompt("Cuántos partidos ganó el equipo?"));
+
+        console.log(typeof(winnedMatches));
+        
+        var tiedMatches = parseInt(prompt("¿Cuántos partidos empató el equipo?"));
+        
+        console.log(typeof(tiedMatches));
+
+        // Cada victoria vale 3 puntos
+        // Cada empate vale 1 punto
+        var totalPoints = winnedMatches * 3 + tiedMatches;
+
+        printText("El total de puntos del equipo es: " + totalPoints);
+        
+    </script>
+</body>
+</html>

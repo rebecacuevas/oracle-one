@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de asistencia</title>
+</head>
+<body>
+
+    <script>
+
+        // Un bachillerato necesita un programa que le permita contar el total de asistencias por grado
+        // Actualmente solo tienen un grupo por cada grado
+        // El programa será usado para mapear los períodos con mayor inasistencia durante el ciclo escolar y así diseñar estrategias para disminuir la deserción educativa
+        
+        // Nota: decidí que este ejercicio tomara el lugar del contador de invitados generales y VIP de una fiesta
+
+        function enterLineBreak(){
+            document.write("<br>");
+        }
+
+        function printText(message){
+            document.write(message);
+            enterLineBreak();
+        }
+
+        const alumnosInscritos = 150; 
+
+        // Pedir datos de asistencia diaria por grupo
+        var cuartoGrado = parseInt(prompt("¿Cuántos alumnos de cuarto grado asistieron hoy a clases?"));
+        var quintoGrado = parseInt(prompt("¿Cuántos alumnos de quinto grado asistieron hoy a clases?"));
+        var sextoGrado = parseInt(prompt("¿Cuántos alumnos de sexto grado asistieron hoy a clases?"));
+        
+        // Asistencia global
+        var asistenciaTotal = cuartoGrado + quintoGrado + sextoGrado;
+
+        printText("El número de alumnos que asistieron hoy al bachillerato es: " + asistenciaTotal);
+
+        // Inasistencia
+        var inasistenciaTotal = alumnosInscritos - asistenciaTotal;
+
+        printText("Hoy faltaron " + inasistenciaTotal + " alumnos a clase");
+
+    </script>
+    
+</body>
+</html>

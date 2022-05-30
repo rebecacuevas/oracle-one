@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula tu IMC</title>
+</head>
+<body>
+
+    <script>
+
+        // Bloque de funciones
+
+        function enterLineBreak(){
+            document.write("<br>");
+        }
+
+        function printText(message){
+            document.write(message);
+            enterLineBreak();
+        }
+
+        function calcImc(weight, height){
+            var yourImc = Math.round(weight / (height * height));
+            printText("¡Hola, " + pacientName + "! " + " Tu Índice de Masa Corporal es " + yourImc);
+            enterLineBreak();
+
+            if (yourImc < 16) {
+
+                printText("Tienes delgadez severa. Te pondremos en contacto con un especialista que te ayudará a recuperar tu salud.");
+
+            } else if (yourImc >= 16 && yourImc <= 16.99) {
+
+                printText("Tienes delgadez moderada.");
+
+            } else if (yourImc >= 17 && yourImc <= 18.49) {
+
+                printText("Tienes delgadez aceptable.");
+
+            } else if (yourImc>= 18.5 && yourImc <= 24.99) {
+                
+                printText("Tienes un peso normal. Continúa cuidando tu salud y tus niveles de actividad física, no descuides tu salud mental.");
+
+            } else if (yourImc >= 25 && yourImc <= 34.99) {
+
+                printText("Tienes sobrepeso. Te pondremos en contacto con un especialista en nutrición para que logres regresar a tu peso normal y evitar caer en una enfermedad crónica.");
+
+            } else if (yourImc>= 30 && yourImc <= 34.99) {
+                
+                printText("Tienes obesidad tipo I. Te pondremos en contacto con un especialista que te ayudará a recuperar tu salud.");
+
+            } else if (yourImc >= 35 && yourImc <= 40) {
+                
+                printText("Tienes obesidad tipo II. Te pondremos en contacto con un especialista que te ayudará a recuperar tu salud.");
+
+            } else if (yourImc >= 40 && yourImc <= 49.99) {
+                
+                printText("Tienes obesidad tipo III, mejor conocida como obesidad mórbida. Te pondremos en contacto con un especialista que te ayudará a recuperar tu salud.");
+
+            } else if (yourImc > 50) {
+                
+                printText("Tienes obesidad tipo IV, mejor conocida como obesidad extrema. Te pondremos en contacto con un especialista que te ayudará a recuperar tu salud.");
+
+            } else {
+                printText("Ingresa valores numéricos válidos");
+            }
+
+        }
+
+        // -------------------------------------------------------------------
+
+        // Pedir datos al usuario
+        var pacientName = prompt("¿Cómo te llamas?");
+
+        var pacientWeightInKilos = prompt("¿Cuántos kilos pesas?");
+
+        var pacientHeightInMeters = prompt("¿Cuántos metros mides?");
+
+        // -------------------------------------------------------------------
+
+        // Creamos una variable para guardar el IMC del paciente
+        // Mandamos llamar la función de cálculo de IMC
+        // Como parámetros le pasamos los nombres de las variables en las que almacenamos los datos que ingresó el usuario
+        var pacientImc = pacientName + calcImc(pacientWeightInKilos, pacientHeightInMeters);
+
+        </script>
+    
+</body>
+</html>
