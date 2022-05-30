@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Puedes conducir?</title>
+</head>
+<body>
+
+    <script>
+
+        function enterLineBreak(){
+            document.write("<br>");
+        }
+
+        function printText(message){
+            document.write(message);
+        }
+
+
+        var userAge = parseInt(prompt("¿Qué edad tienes?"));
+
+        var driverLicense = prompt("¿Tienes licencia de conducir?");
+        
+
+        if (userAge >= 18 && driverLicense === "si") {
+
+            printText("¡Felicidades! Te esperamos en nuestras oficinas para continuar con tu proceso de contratación.");
+
+        } else {
+
+            printText("Lo sentimos, no cumples con los requisitos para el puesto. Necesitas ser mayor de edad y contar con licencia vigente de conducir.");
+
+        }
+
+    </script>
+    
+</body>
+</html>

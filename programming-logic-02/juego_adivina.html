@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el número secreto</title>
+</head>
+<body>
+
+    <script>
+
+        function enterLineBreak(){
+            document.write("<br>");
+        }
+
+        function printText(message){
+            document.write(message);
+        }
+
+        // Math.round() - redondea el número
+        // Math.random() - arroja un número al azar
+        // Multiplicar por 10 hace que solo nos arroje valores enteros del 1 al 10
+        var numeroSecreto = Math.round(Math.random() * 10);
+        var numeroJugador = parseInt(prompt("Intenta adivinar qué número estoy pensando"));
+
+        if (numeroJugador === numeroSecreto) {
+
+            printText("¡Felicidades!");
+
+        } else {
+
+            printText("No acertaste. El número secreto era " + numeroSecreto);
+
+        }
+
+    </script>
+    
+</body>
+</html>
