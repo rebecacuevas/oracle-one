@@ -1,7 +1,7 @@
 ## Guía de temas vistos en cada archivo
 
 | Nombre archivo               | Temas que abarca                                                                                                                                                                                                               |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | soccer.html                  | typeof() y parseInt()                                                                                                                                                                                                          |
 | asistencia.html              | Ejercicio para registrar la asistencia de un bachillerato                                                                                                                                                                      |
 | historico.html               | ciclo if() para comparar puntajes de un equipo de soccer                                                                                                                                                                       |
@@ -16,4 +16,5 @@
 | multiplication_table_v2.html | Programa para calcular tablas de multiplicar con ciclo while() y ciclo for()                                                                                                                                                   |
 | familia.html                 | Programa que calcula el promedio de edades en una familia usando un ciclo while()                                                                                                                                              |
 | numeros_pares.html           | Programa para imprimir todos los números pares hasta el 100 usando un ciclo while()                                                                                                                                            |
-| juego_adivina_v5.html        | Añadimos funcionalidad de dar intentos al jugador usando un ciclo while() e interrumpimos el ciclo con un break si el usuario gana                                                                                             |     |
+| juego_adivina_v5.html        | Añadimos funcionalidad de dar intentos al jugador usando un ciclo while() e interrumpimos el ciclo con un break si el usuario gana                                                                                             |
+| estrellas.html               | Imprimir columnas de asteriscos con ciclos for() anidados                                                                                                                                                                      |
