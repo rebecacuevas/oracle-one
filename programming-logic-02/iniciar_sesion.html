@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia sesión</title>
+</head>
+<body>
+
+    <script>
+
+    var userName = "alura";
+    var password = "alura321";
+
+    var numberOfTries = 3;
+    var counter = 1;
+
+    
+    while(counter <= numberOfTries) {
+        
+        var logIn = prompt("Ingrese su usuario");
+        var passwordLogged = prompt("Ingrese su contraseña");
+        
+        if(logIn == userName && password == passwordLogged) {
+            alert("Bienvenido al sistema, " + userName);
+            break;
+
+        } else if(counter == 3) {
+            alert("Acceso denegado");
+        } else {
+            alert("Inicio de sesión inválido");
+        }
+
+        counter++;
+    }
+
+    </script>
+    
+</body>
+</html>
