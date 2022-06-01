@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas de Multiplicar</title>
+</head>
+<body>
+
+    <script>
+
+        function enterLineBreak(){
+            document.write("<br>");
+        }
+
+        function printText(message){
+            document.write(message);
+        }
+
+        // Inicializar multiplicador en 1 
+        var multiplicator = 1;
+
+        // Pedir al usuario qué tabla de multiplicar quiere calcular
+        var userNumber = parseInt(prompt("¿Qué tabla de multiplicar deseas calcular?"));
+
+        // Calcular tabla de multiplicar con ciclo while
+
+        printText("Tu tabla de multiplicar ha sido calculada con un ciclo while");
+
+        enterLineBreak();
+
+        printText("Tabla de multiplicar del " + userNumber);
+
+        enterLineBreak();
+
+        while (multiplicator <= 10) {
+
+            printText(userNumber * multiplicator);
+
+            enterLineBreak();
+
+            multiplicator++; //multiplicator = multiplicator + 1;
+
+        }
+
+        enterLineBreak();
+
+
+        // Calcular tabla de multiplicar con un ciclo for
+
+        printText("Tu tabla de multiplicar ha sido calculada con un ciclo for");
+
+        enterLineBreak();
+
+        printText("Tabla de multiplicar del " + userNumber);
+
+        enterLineBreak();
+
+        for(var multiplicator = 1; multiplicator <= 10; multiplicator++) {
+
+            printText(userNumber * multiplicator);
+
+            enterLineBreak();
+
+        }
+
+    </script>
+    
+</body>
+</html>
