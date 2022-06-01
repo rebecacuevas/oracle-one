@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula la edad promedio de tu familia</title>
+</head>
+<body>
+
+    <script>
+
+        function enterLineBreak(){
+            document.write("<br>");
+        }
+
+        function printText(message){
+            document.write(message);
+        }
+
+        var familyMembers = parseInt(prompt("¿Cuántas personas hay en tu familia?"));
+
+        // Todas las inicializaciones deben estar fuera del ciclo while
+        var counter = 1;
+        var ageSum = 0;
+
+        while (counter <= familyMembers) {
+
+            age = parseInt(prompt("Escribe la edad de tu familiar"));
+            
+            ageSum = ageSum + age; 
+
+            counter++;
+
+        }
+
+        // Calcular promedio de edades
+        ageMean = ageSum / familyMembers;
+
+        printText("El promedio de edad en tu familia es " + ageMean);
+
+    </script>
+    
+</body>
+</html>
