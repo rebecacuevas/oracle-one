@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de ingredientes</title>
+</head>
+<body>
+
+    <h1>Recetas de Armando</h1>
+
+    <script>
+
+        var miReceta = prompt("¿Cuál es el nombre de tu receta?");
+        document.write("Hoy voy a cocinar: " + miReceta + "<br><br>");
+
+        var ingredientes = [];
+        var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+        var contador = 1;
+
+        document.write("Ingredientes" + "<br><br>");
+
+        while(contador <= cantidad) {
+
+            var ingrediente = prompt("Informe el ingrediente " + contador);
+            var ingredienteRepetido = false;
+
+            for(var index = 0; index < ingredientes.length; index++) {
+    
+                        if(ingredientes[index] == ingrediente){
+                            ingredienteRepetido = true;
+                            alert("Ingrediente repetido: " + ingrediente);
+                            break;
+                        }
+    
+                    }
+    
+                    if(ingredienteRepetido == false) {
+                        ingredientes.push(ingrediente);
+                        contador++;
+                    }
+
+        }
+
+        for(var i = 0; i < ingredientes.length; i++) {
+            document.write(ingredientes[i] + "<br>");
+        }
+
+        console.log(ingredientes);
+
+    </script>
+    
+</body>
+</html>
