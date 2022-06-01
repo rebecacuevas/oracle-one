@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿En qué número estoy pensando?</title>
+</head>
+<body>
+
+    <script>
+
+        function enterLineBreak(){
+            document.write("<br>");
+        }
+
+        function printText(message){
+            document.write(message);
+        }
+
+        function generateSecretNumber(n){
+            return Math.round(Math.random() * n);
+        }
+
+        var secretNumber = generateSecretNumber(10);
+        var numberOfTries = 3;
+        var counter = 1;
+        
+        while (counter <= numberOfTries) {
+            
+            var playerTry = parseInt(prompt("Intenta adivinar qué número del 0 al 10 estoy pensando"));
+
+            if (playerTry === secretNumber) {
+    
+                alert("¡Felicidades! Ganaste en el intento " + counter);
+                break; //Interrumpir ciclo
+                
+            } else {
+    
+                alert("Fallaste, el número era " + secretNumber);
+                enterLineBreak();
+
+            }
+
+            counter++;
+
+        }
+
+        printText("Fin del juego");
+
+    </script>
+    
+</body>
+</html>
