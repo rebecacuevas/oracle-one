@@ -4,3 +4,4 @@
 | --------------- | ----------------------------------------------------------------------------------- |
 | bandera.html    | Bandera de Bélgica creada con la etiqueta canvas                                    |
 | bandera_v2.html | Bandera creada con la etiqueta canvas, usando la función arc() para crear un escudo |
+| creeper.html    | Creeper de Minecraft creado con canvas                                              |
