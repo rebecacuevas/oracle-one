@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandera</title>
+</head>
+<body>
+
+    <canvas width="600" height="800"></canvas>
+
+    <script>
+
+        // Dibujar un cuadrado con variables de coordenadas de posición y color
+        function drawSquare(x, y, color) {
+
+            var screen = document.querySelector("canvas");
+            var brush = screen.getContext("2d");
+
+            brush.fillStyle = color;
+            brush.fillRect(x,y,50,50);
+
+            brush.strokeStyle = "black";
+            brush.strokeRect(x,y,50,50);
+
+        }
+
+        // Dibujar un cuadrado con variables de coordenadas de posición, color y altura aleatoria
+        function squareRandomHeight(x, y, color, height) {
+            var screen = document.querySelector("canvas");
+            var brush = screen.getContext("2d");
+
+            brush.fillStyle = color;
+            brush.fillRect(x,y,50,height);
+
+            brush.strokeStyle = "black";
+            brush.strokeRect(x,y,50,height);
+        }
+
+        // Patrón diagonal
+        drawSquare(0,0,"green");
+        drawSquare(50,50,"green");
+        drawSquare(100,100,"green");
+
+        /*
+
+        // Así se vería la solución sin usar funciones
+
+        var screen = document.querySelector("canvas");
+        var brush = screen.getContext("2d");
+
+        brush.fillStyle = "green";
+        brush.fillRect(0,0,50,50);
+        brush.strokeStyle = "black";
+        brush.strokeRect(0,0,50,50);
+
+        brush.fillRect(50,0,50,50);
+        brush.strokeRect(50,0,50,50);
+
+        brush.fillRect(100,0,50,50);
+        brush.strokeRect(100,0,50,50);
+
+        brush.fillRect(150,0,50,50);
+        brush.strokeRect(150,0,50,50);
+
+        brush.fillRect(200,0,50,50);
+        brush.strokeRect(200,0,50,50);
+
+        */
+
+        // Semáforo
+        drawSquare(0,150,"green");
+        drawSquare(0,200,"yellow");
+        drawSquare(0,250,"red");
+
+
+        // Altura aleatoria
+        squareRandomHeight(0,300,"orange",Math.round(Math.random() * 50));
+        // Math.round() - redondea un entero
+        // Math.random() - devuelve un número aleatorio entre 0 y 1
+        // Lo multiplicamos por 50 para poder obtener un número entre 0 y 50
+        
+        // Patrón que ocupa todo el ancho del canvas con ciclo while
+        var x = 0;
+
+        while(x < 600) {
+
+            drawSquare(x, 400, "red");
+            drawSquare(x, 450, "white");
+            drawSquare(x, 500, "blue");
+            x = x + 50;
+
+        }
+
+        // Patrón que ocupa todo el ancho del canvas con ciclo for
+
+        for(var x = 0; x < 600; x = x + 50) {
+            drawSquare(x, 600, "black");
+            drawSquare(x, 650, "red");
+            drawSquare(x, 700, "yellow");
+        }
+
+    </script>
+    
+</body>
+</html>
