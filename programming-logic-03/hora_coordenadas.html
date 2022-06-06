@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cuándo y dónde hice click?</title>
+</head>
+<body>
+
+    <canvas width="600" height="400"></canvas>
+    
+    <script>
+
+        function showMessage(event) {
+
+            var x = event.pageX - screen.offsetLeft; //position on x axis
+            var y = event.pageY - screen.offsetTop; //position on y axis
+            var date = new Date(); //date type variable
+            var hour = checkTime(date.getHours()) + ":" + checkTime(date.getMinutes()) + ":" + checkTime(date.getSeconds());
+
+            function checkTime(i) {
+                if(i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+
+            console.log(x);
+            console.log(y);
+            console.log(date);
+            console.log(hour);
+
+            alert("La hora es: " + hour + " y las coordenadas son: x = " + x + ", y = " + y);
+
+        }
+
+        var screen =document.querySelector("canvas");
+        var brush = screen.getContext("2d");
+
+        brush.fillStyle = "grey";
+        brush.fillRect(0,0,600,400);
+
+        screen.onclick = showMessage;
+
+    </script>
+
+</body>
+</html>
