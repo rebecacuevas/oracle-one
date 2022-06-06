@@ -8,3 +8,4 @@
 | escuadra.html       | Escuadra dibujada usando función beginPath(), moveTo(), lineTo() y fill()           |
 | patron_bandera.html | Crear patrones geométricos usando funciones e iteraciones                           |
 | circulos.html       | Crear una flor abstracta usando una función que dibuja círculos                     |
+| grafica_barras.html | Crear gráficas de barras usando funciones, arrays                                   |
