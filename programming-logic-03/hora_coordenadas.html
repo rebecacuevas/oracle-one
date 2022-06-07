@@ -16,6 +16,7 @@
 
             var x = event.pageX - screen.offsetLeft; //position on x axis
             var y = event.pageY - screen.offsetTop; //position on y axis
+            // con offset le indicamos que reste el espacio fuera del canvas
             var date = new Date(); //date type variable
             var hour = checkTime(date.getHours()) + ":" + checkTime(date.getMinutes()) + ":" + checkTime(date.getSeconds());
 
