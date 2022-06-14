@@ -12,3 +12,4 @@
 | puntero.html          | onclick                                                                             |
 | hora_coordenadas.html | Acceder a datos del evento onclick y detectar hora del mismo                        |
 | dibujar_circulos.html | onclick, oncontextmenu                                                              |
+| animacion_01.html     | setInterval()                                                                       |

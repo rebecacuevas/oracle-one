@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer animación</title>
+</head>
+<body>
+
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+
+        var screen = document.querySelector("canvas");
+        var brush = screen.getContext("2d");
+        brush.fillStyle = "lightgrey";
+        brush.fillRect(0,0,600,400);
+
+        function drawCircumference(x, y, radius) {
+            brush.fillStyle = "blue";
+            brush.beginPath();
+            brush.arc(x, y, radius, 0, 2 * Math.PI);
+            brush.fill();
+        }
+
+        function cleanScreen() {
+
+            brush.clearRect(0,0,600,400);
+
+        }
+
+        var x = 0;
+        var direction = 1;
+
+        function updateScreen() {
+
+            cleanScreen();
+
+            if(x > 600){
+                direction = -1;
+            }else if(x < 0) {
+                direction = 1;
+            }
+
+            drawCircumference(x,20,10);
+            x = x + direction;
+
+        }
+
+        setInterval(updateScreen, 100);
+
+    </script>
+    
+</body>
+</html>
