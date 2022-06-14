@@ -15,3 +15,4 @@
 | animacion_01.html     | setInterval()                                                                       |
 | animacion_02.html     | Math.floor()                                                                        |
 | animacion_03.html     | onmousemove, onmouseup, onmousedown                                                 |
+| animacion_04.html     | Three color Paint                                                                   |
