@@ -14,3 +14,4 @@
 | dibujar_circulos.html | onclick, oncontextmenu                                                              |
 | animacion_01.html     | setInterval()                                                                       |
 | animacion_02.html     | Math.floor()                                                                        |
+| animacion_03.html     | onmousemove, onmouseup, onmousedown                                                 |
